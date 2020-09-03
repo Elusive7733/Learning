@@ -60,6 +60,6 @@ class bot:
         not_following_back = [user for user in following if user not in followers]
         print(not_following_back)
 
-my_bot = bot('abdulr7733', 'Omegasingularity4418')
+my_bot = bot('username', 'pass')
 my_bot.get_unfollowers()
 
