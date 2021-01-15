@@ -11,7 +11,7 @@ const rate = 123 //doesnt change
 let Player = {
 
     username: 'Elusive',
-    rank: 'Nigga'
+    rank: 'gold'
 
 };
 
@@ -30,6 +30,6 @@ console.log(Player);
 //Benifit of Bracket Notation
 let user_selected = 'username'
 // let user_input = window.prompt("Enter Username: ");
-Player[user_selected] = 'Elusive_Nibba'
+Player[user_selected] = 'Elusive_Player'
 
 console.log(Player);
