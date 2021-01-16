@@ -12,8 +12,6 @@ let Player = {
     rank: 'gold'
 
 };
-
-
 console.log(Player);
 
 //dot
