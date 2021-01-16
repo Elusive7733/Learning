@@ -80,3 +80,9 @@ const user = {
 user.speakName();
 
 console.clear()
+
+const add = (x = 1, y = 2) => {
+	console.log(x + y)
+}
+
+add()
