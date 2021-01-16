@@ -86,8 +86,52 @@ const add = (x = 1, y = 2) => {
 
 add()
 
-console.clear()
 
 list.forEach((product, index) => {
     console.log(`${product}: ${index}`)
 });
+
+
+//make a copy of the array
+newlist = list.map(element => {
+    return element + "new";
+})
+
+console.log(newlist);
+
+//filter an array
+const filterList = newlist.filter(item => {
+    return item === "7new"
+})
+
+console.log(filterList);
+
+
+console.clear()
+
+
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    displayname_age(){
+        console.log(`Person: ${this.name} is of age ${this.age}`)
+    }
+}
+//inheritance 
+class Student extends Person{
+    constructor(name, age, rollno, batch){
+        super(name, age)
+        this.rollno = rollno
+        this.batch = batch
+    }
+    displayBatch_rollno(){
+        console.log(`Student ${this.name} of age ${this.age} and Roll#: ${this.rollno} is in batch: ${this.batch}`)
+    }
+}
+
+const Abdulah = new Student("Abdullah", 22, "18K-0170", 2022)
+Abdulah.displayBatch_rollno();
+Abdulah.displayname_age();
+console.log(Abdulah)
