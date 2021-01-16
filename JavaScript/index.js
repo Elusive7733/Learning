@@ -88,6 +88,6 @@ add()
 
 console.clear()
 
-list.forEach((product) => {
-    console.log(product)
+list.forEach((product, index) => {
+    console.log(`${product}: ${index}`)
 });
