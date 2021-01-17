@@ -106,10 +106,6 @@ const filterList = newlist.filter(item => {
 
 console.log(filterList);
 
-
-console.clear()
-
-
 class Person{
     constructor(name, age){
         this.name = name;
@@ -135,3 +131,19 @@ const Abdulah = new Student("Abdullah", 22, "18K-0170", 2022)
 Abdulah.displayBatch_rollno();
 Abdulah.displayname_age();
 console.log(Abdulah)
+
+console.clear()
+
+//Promise
+const prom = new Promise((resolve, reject) => {
+    //every thing here is asyc
+    setTimeout(() => {
+        // resolve({user: "Elusive", id: 10})
+        reject(new Error("Tf nibba sumting wong"));
+    }, 2000)
+})
+
+prom.then(data => {
+    console.log(data)
+})
+.catch(err => console.log(err));
