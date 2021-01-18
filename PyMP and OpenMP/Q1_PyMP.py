@@ -27,11 +27,16 @@ def exp():
     return s
 
 
-# with pymp.Parallel(4) as p:
-#     p.print(p.num_threads, p.thread_num)
+with pymp.Parallel(2) as p:
+    print(".....Creating Threads.....\n\n");
+    for sec_idx in p.xrange(2):
+        if sec_idx == 0:
+            power()
+        elif sec_idx == 1:
+            factorial()
+    print(".....Threads Created.....\n");
+    print(".....Result Collected.....\n\n");
 
 
-power()
-factorial()
 sum = exp()
-print(sum)
+print("Exponential: Value of ",x," is: ",sum)
