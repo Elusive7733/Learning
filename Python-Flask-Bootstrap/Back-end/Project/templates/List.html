@@ -1,0 +1,21 @@
+{% extends 'Base.html' %}
+
+{% block Content %}
+    <div class='jumbotron'>
+        <h1>List of all rick and morties</h1>
+        <br>
+        <h2>Ricks:</h2>
+        <ul>
+            {% for rick in ricks %}
+                <li>{{rick}}</li>
+            {% endfor %}
+        </ul>
+        <br>
+        <h2>Mortys:</h2>
+        <ul>
+            {% for morty in mortys %}
+                <li>{{morty}}</li>
+            {% endfor %}
+        </ul>
+    </div>    
+{% endblock Content %}

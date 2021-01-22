@@ -1,0 +1,17 @@
+<p>
+{% if name %}
+Name you entered is {{name}}
+{% else %}
+Please Enter name:
+{% endif %}
+</p>
+
+
+<form method = "POST">
+
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    <br>
+    {{ form.name() }}
+    {{ form.submit() }}
+</form>

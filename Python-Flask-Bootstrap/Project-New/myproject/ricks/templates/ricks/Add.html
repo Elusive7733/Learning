@@ -1,0 +1,17 @@
+{% extends 'Base.html' %}
+
+{% block Content %}
+    <div class = 'jumbotron'>
+        <h1>Add a Rick not assosiated with the Council</h1>
+        <form method = 'POST'>
+            {{form.hidden_tag()}}
+            {{form.Dim.label}} {{form.Dim()}}
+            <br>
+            {{form.Morty_id.label}} {{form.Morty_id()}}
+            <br>
+            {{form.On_the_council.label}} {{form.On_the_council()}}
+            <br>
+            {{form.submit()}}
+        </form>
+    </div>
+{% endblock Content %}

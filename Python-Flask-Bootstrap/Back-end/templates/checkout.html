@@ -1,0 +1,29 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+    
+    <div class="jumbotron">
+        <h1>Hello {{fname}} {{lname}}, Please check your info to make sure</h1>
+        <h2>Your Username is: {{uname}}</h2>
+        <h2>Your Email is: {{em}}</h2>
+        <h2>Your Password is: {{pw}}</h2>
+        <h2>Your Phone is: {{pnum}}</h2>
+        <br>
+        <ul>
+
+
+        {% if L_flag == False %}
+            <li>Your username does not contain a lowercase letter</li>
+        {% endif %}
+        
+        {% if U_flag == False %}
+        <li>Your username does not contain a UPPERCASE letter</li>
+        {% endif %}
+
+        {% if Num_flag == False %}
+        <li>Your username does not end in a Number</li>
+        {% endif %}
+        </ul>
+    </div>
+
+{% endblock content %}

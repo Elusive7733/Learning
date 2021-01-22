@@ -1,0 +1,18 @@
+{% extends 'Base.html' %}
+
+{% block Content %}
+    <div class = 'jumbotron'>
+        <h1>Add a Morty not assosiated with a Rick</h1>
+        <form method = 'POST'>
+            {{form.hidden_tag()}}
+            {{form.Dim.label}} {{form.Dim()}}
+            <br>
+            {{form.Rickless.label}} {{form.Rickless()}}
+            <br>
+            {{form.submit()}}
+        </form>
+    </div>
+{% endblock Content %}
+
+
+ 

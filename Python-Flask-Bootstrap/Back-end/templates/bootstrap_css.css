@@ -1,0 +1,57 @@
+body{
+    background-color: #000000;
+    background-image: url(../pics/red_pillars_by_quentinvcastel_de2kujz.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+.navbar-brand{
+    font-family: 'Play', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.btn-primary{
+    font-family: 'Play', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 12px;
+    color: black!important;
+    background: white;
+    margin-left: 3%;
+}
+
+#head{
+    color: whitesmoke;
+    font-family: 'Play', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 42%;
+}
+
+.row{
+    font-family: 'Play', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    color:whitesmoke;
+    padding: 25px 25px;
+}
+
+
+/* .form-control{
+    background-color:transparent !important;
+    border-color: black !important;
+    border:thick !important;
+} */
+
+
+.form-check{
+    font-family: 'Play', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-left: 3%;
+}
+
+
+
+

@@ -1,0 +1,15 @@
+{% extends 'Base.html' %}
+
+{% block Content %}
+    <div class='jumbotron'>
+        <h1>Remove Dead Rick's by entering their id</h1>
+        <form method="POST">
+            {{form.hidden_tag()}}
+            {{form.id.label}} {{form.id}}
+            <br>
+            {{form.submit()}}
+        </form>
+    </div>
+    
+{% endblock Content %}
+

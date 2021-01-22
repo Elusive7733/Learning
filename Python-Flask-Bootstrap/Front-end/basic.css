@@ -1,0 +1,72 @@
+body{
+ background-color: lightcyan;   
+}
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 40px;
+    border: black;
+    border-width: thin;
+    border-style: solid;
+}
+
+h2{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    color: peru;
+}
+
+p{
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+    font-size: 25px;
+}
+
+li{
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+    font-size: 20px;
+}
+
+
+#link{
+    color: crimson;
+}
+
+/* #emtag{
+    border: blue 5px solid;
+}
+
+#pwtag{
+    border: blue 5px solid;
+}
+
+#Login{
+    border: blue 5px solid;
+} */
+
+input{
+    border: blue 5px solid;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: 0px;
+    width: 10%;
+  }
+
+#submit{
+    text-align: center;
+    border: blue 5px solid;
+}
+
+#feedback{
+    border: rgba(169,169,169, 0.5) 5px solid;
+}
+
+
+
+
+

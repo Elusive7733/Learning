@@ -1,0 +1,69 @@
+----------------------BASICS----------------------
+
+Html elements: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+lorem = random generated text
+lorem20 = 20 random words
+
+Tags:
+    <strong>Inside strong = bold</strong>
+	
+    <em>Inside emphasis = italic</em>
+	
+    <br> (break)
+
+    List:
+        <ol> </ol> (ordered list) (numbered)
+        <ul> </ul> (unordered list) (bullet points)
+        <li> </li> (list item)
+	
+    <div> </div> <span> </span> used for styling
+	
+    <img src="sorce.jpeg" alt=""> (for image) (alt holds string if img not found)
+	
+    <a href=""></a> (for hyperlinks) (href = "points to actual link")
+	
+    <form action="" method=""></form>
+        (action = redirect page) 
+        (method = what to do, ex= get, post)
+		
+    <label for=""></label> (used for label)
+	
+    <input type="" name="" id="" value="">
+        (type = email, text, password, submit, color, ect)
+        (name = passed back to the server)
+        (id = used for refrenceing / identifying tags)
+        (value = default value)
+
+    <select class="" name="">
+        <option value="">display to user</option>
+    </select>
+        (select for drop down menu) (select/option = key/value pair)
+            (class = for css styling)
+            (name = passed back to server)
+                (option displayed to user)
+                    (value = passed pack to server)
+ 
+
+
+----------------------------CSS----------------------------
+
+-use class for group of elements
+    -starts with . in css
+
+-use id for a specific element
+    -starts with # in css
+
+font-family (for font)
+color: (font color)
+text-align (align text)
+font-size (size of font)
+border: black (border color)
+border-width: (border width)
+border-style: (style of border) 
+
+
+----------------------------BootStrap----------------------------
+
+link bootstrap_min.css
+script bootstrap_min.js
