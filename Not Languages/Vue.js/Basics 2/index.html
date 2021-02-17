@@ -21,8 +21,12 @@
       <button v-on:click="add_counter(100)">Add 100</button>
       <button v-on:click="subtract_counter(50)">Subtract 50</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="set_name" />
+      <input type="text" v-on:input="set_name($event)" />
       <p>Your Name: {{ name }}</p>
+      <form v-on:submit="submitForm">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>
