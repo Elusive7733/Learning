@@ -16,7 +16,7 @@ inputid = wait.until(expect.visibility_of_element_located((By.XPATH, "//input[@i
 inputpass = wait.until(expect.visibility_of_element_located((By.XPATH, "//input[@id='pw']")))
 submit_btn = wait.until(expect.visibility_of_element_located((By.XPATH, "//input[@id='submit']")))
 inputid.send_keys("K180170")
-inputpass.send_keys("doto4life")
+inputpass.send_keys("")
 submit_btn.click()
 
 

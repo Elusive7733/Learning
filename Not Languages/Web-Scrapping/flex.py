@@ -18,6 +18,6 @@ captha_btn = wait.until(expect.visibility_of_element_located((By.XPATH, "//div[@
 submit_btn = wait.until(expect.visibility_of_element_located((By.XPATH, "//button[@id='m_login_signin_submit']")))
 
 inputid.send_keys("18K-0170")
-inputpass.send_keys("Doto4lyf")
+inputpass.send_keys("")
 captha_btn.click()
 submit_btn.click()
