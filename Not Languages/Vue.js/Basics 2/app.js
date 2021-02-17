@@ -5,6 +5,14 @@ const app = Vue.createApp({
       name: "Elusive",
     };
   },
+  computed: {},
+  watch: {
+    counter(value) {
+      if (value > 500) {
+        this.counter = 0;
+      }
+    },
+  },
   methods: {
     add_counter(num) {
       this.counter += num;

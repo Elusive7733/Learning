@@ -22,7 +22,7 @@
       <button v-on:click.right="subtract_counter(50)">Subtract 50</button>
       <p v-once>Starting: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="set_name($event)" />
+      <input type="text" v-model="name" />
       <p>Your Name: {{ name }}</p>
       <form v-on:submit.prevent="submitForm">
         <input type="text" />
