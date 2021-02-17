@@ -18,3 +18,6 @@ submit_btn = wait.until(expect.visibility_of_element_located((By.XPATH, "//input
 inputid.send_keys("K180170")
 inputpass.send_keys("doto4life")
 submit_btn.click()
+
+
+# https://www.google.com/intl/en-GB/gmail/about/#
