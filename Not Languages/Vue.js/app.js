@@ -1,9 +1,10 @@
 const app = Vue.createApp({
   data() {
+    //same as data: function(){}
     return {
-      counter: 0,
-    };
+      goal: "Learn Vue", //this variable can be anything
+    }; //returns an object
   },
 });
 
-app.mount('#events');
+app.mount("#user-goal");
