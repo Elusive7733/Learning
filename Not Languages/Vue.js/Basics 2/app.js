@@ -12,6 +12,11 @@ const app = Vue.createApp({
     subtract_counter(num) {
       this.counter -= num;
     },
+    set_name(event) {
+      console.log(event);
+      console.log(event.target);
+      this.name = event.target.value;
+    },
   },
 });
 
