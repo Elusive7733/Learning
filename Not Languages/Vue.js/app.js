@@ -3,6 +3,7 @@ const app = Vue.createApp({
     //same as data: function(){}
     return {
       goal: "Learn Vue", //this variable can be anything
+      vueLink: "https://nuxtjs.org/",
     }; //returns an object
   },
 });
