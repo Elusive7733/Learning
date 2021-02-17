@@ -5,8 +5,9 @@ const app = Vue.createApp({
       name: "Elusive",
     };
   },
-  computed: {},
+  computed: {}, // calculate output value dynamically
   watch: {
+    // execute code because something changed
     counter(value) {
       if (value > 500) {
         this.counter = 0;
