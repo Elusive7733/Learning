@@ -2,14 +2,15 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
+      name: "Elusive",
     };
   },
   methods: {
-    add_counter() {
-      this.counter += 1;
+    add_counter(num) {
+      this.counter += num;
     },
-    subtract_counter() {
-      this.counter -= 1;
+    subtract_counter(num) {
+      this.counter -= num;
     },
   },
 });
