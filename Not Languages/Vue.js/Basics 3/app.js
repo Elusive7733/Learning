@@ -1,8 +1,24 @@
 const app = Vue.createApp({
   data() {
-    return {};
+    return {
+      boxA = false,
+      boxB = false,
+      boxC = false,
+    };
   },
-  methods: {},
+  methods: {
+    boxSelected(box) {
+      if (box === 'A') {
+        this.boxA = true;
+      }
+      else if (box === 'B') {
+        this.boxB = true;
+      }
+      else if (box === 'C') {
+        this.boxC = true;
+      }
+    }
+  },
 });
 
 app.mount("#styling");
