@@ -7,14 +7,19 @@ def sigmoid(num):
 
 
   
-x = np.linspace(-10, 10, 100) 
+x = np.linspace(-10, 10, 100)
 y = []
 for i in range(len(x)):
   y.append(sigmoid(x[i]))
   
 
-plt.plot(x, y, "*") 
+plt.plot(x, y, "^") 
 plt.xlabel("x") 
 plt.ylabel("Sigmoid Function") 
   
 plt.show() 
+
+
+days = ["monday", "tuesday", "wednesday"]
+
+print(days[0][:3])
