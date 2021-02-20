@@ -19,7 +19,3 @@ plt.ylabel("Sigmoid Function")
   
 plt.show() 
 
-
-days = ["monday", "tuesday", "wednesday"]
-
-print(days[0][:3])
