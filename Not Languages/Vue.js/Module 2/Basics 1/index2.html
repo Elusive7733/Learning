@@ -19,7 +19,7 @@
     </header>
     <section id="user-goals">
       <h2>My course goals</h2>
-      <input type="text" v-model="goal_data" />
+      <input type="text" v-model="goal_data" @ />
       <button @click="addGoal()">Add Goal</button>
       <p v-if="goals.length === 0">no goals have been added</p>
       <ul v-else>
