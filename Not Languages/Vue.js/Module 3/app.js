@@ -14,16 +14,22 @@ const app = Vue.createApp({
   },
   computed: {
     enemyBarStyle() {
+      if (this.enemy_health < 0) {
+        return { width: "0%" };
+      }
       return { width: this.enemy_health + "%" };
     },
     playerBarStyle() {
+      if (this.player_health < 0) {
+        return { width: "0%" };
+      }
       return { width: this.player_health + "%" };
     },
     useSpecialAttack() {
-      return this.round % 2 !== 0 || game_end; //this returns true or false
+      return this.round % 3 !== 0; //this returns true or false
     },
     useHeal() {
-      return this.round % 2 !== 0 || game_end; //this returns true or false
+      return this.round % 2 !== 0; //this returns true or false
     },
   },
   watch: {
@@ -73,6 +79,13 @@ const app = Vue.createApp({
         this.player_health += healValue;
       }
       this.defend();
+    },
+    startGame() {
+      this.player_health = 100;
+      this.enemy_health = 100;
+      this.round = 0;
+      this.game_end = false;
+      this.win = null;
     },
   },
 });
