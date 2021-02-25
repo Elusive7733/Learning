@@ -8,6 +8,8 @@ const app = Vue.createApp({
       player_health: 100,
       enemy_health: 100,
       round: 0,
+      game_end: false,
+      win: null,
     };
   },
   computed: {
@@ -18,23 +20,30 @@ const app = Vue.createApp({
       return { width: this.player_health + "%" };
     },
     useSpecialAttack() {
-      return this.round % 3 !== 0; //this returns true or false
+      return this.round % 2 !== 0 || game_end; //this returns true or false
+    },
+    useHeal() {
+      return this.round % 2 !== 0 || game_end; //this returns true or false
     },
   },
   watch: {
     //instead of making a lot of if statements in every function we can use watchers
     player_health(value) {
       if (value <= 0 && this.enemy_health <= 0) {
-        //a draw
+        this.win = null;
+        this.game_end = true;
       } else if (value <= 0) {
-        //player lost
+        this.win = false;
+        this.game_end = true;
       }
     },
     enemy_health(value) {
       if (value <= 0 && this.player_health <= 0) {
-        //a draw
+        this.win = null;
+        this.game_end = true;
       } else if (value <= 0) {
-        //player lost
+        this.win = true;
+        this.game_end = true;
       }
     },
   },
@@ -51,13 +60,13 @@ const app = Vue.createApp({
     },
     specialAttack() {
       this.round++;
-      let dmg = getRandom(9, 16);
+      let dmg = getRandom(19, 19);
       this.enemy_health -= dmg;
       this.defend();
     },
     heal() {
       this.round++;
-      let healValue = getRandom(10, 20);
+      let healValue = getRandom(20, 20);
       if (this.player_health + healValue > 100) {
         this.player_health = 100;
       } else {
