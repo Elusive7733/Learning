@@ -87,6 +87,10 @@ const app = Vue.createApp({
       this.game_end = false;
       this.win = null;
     },
+    surrender() {
+      this.game_end = true;
+      this.win = false;
+    },
   },
 });
 

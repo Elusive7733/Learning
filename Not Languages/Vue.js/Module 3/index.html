@@ -38,13 +38,13 @@
         <h3 v-else>Game Draw!</h3>
         <button @click="startGame">Start New game</button>
       </section>
-      <section id="controls">
-        <button :disabled="game_end" @click="attack">ATTACK</button>
-        <button :disabled="useSpecialAttack || game_end" @click="specialAttack">
+      <section id="controls" v-else>
+        <button @click="attack">ATTACK</button>
+        <button :disabled="useSpecialAttack" @click="specialAttack">
           SPECIAL ATTACK
         </button>
-        <button :disabled="useHeal || game_end" @click="heal">HEAL</button>
-        <button :disabled="game_end">SURRENDER</button>
+        <button :disabled="useHeal" @click="heal">HEAL</button>
+        <button @click="surrender">SURRENDER</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
