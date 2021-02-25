@@ -34,7 +34,7 @@
         <button :disabled="useSpecialAttack" @click="specialAttack">
           SPECIAL ATTACK
         </button>
-        <button>HEAL</button>
+        <button :disabled="round%2 === 0" @click="heal">HEAL</button>
         <button>SURRENDER</button>
       </section>
       <section id="log" class="container">
