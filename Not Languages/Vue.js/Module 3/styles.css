@@ -103,17 +103,24 @@ button:disabled {
 }
 
 .log--player {
-  color: #7700ff;
+  color: #0099ff;
+  font-weight: bold;
 }
 
-.log--monster {
-  color: #da8d00;
+.log--enemy {
+  color: #da0000;
+  font-weight: bold;
 }
 
 .log--damage {
-  color: red;
+  color: rgb(255, 196, 2);
+}
+
+.log--ultimate {
+  color: rgb(255, 123, 0);
+  font-weight: bold;
 }
 
 .log--heal {
-  color: green;
+  color: rgb(9, 255, 0);
 }

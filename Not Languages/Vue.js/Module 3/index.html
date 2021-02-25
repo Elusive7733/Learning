@@ -48,7 +48,45 @@
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
-        <ul></ul>
+        <ul>
+          <li v-for="message in log_messages">
+            <span v-if="message.action_by === 'Player'">
+              <span class="log--player">{{message.action_by}}</span> ---
+            </span>
+            <span v-else>
+              <span class="log--enemy">{{message.action_by}}</span> ---
+            </span>
+
+            <span v-if="message.action_type === 'Attacks'">
+              <span class="log--damage">{{message.action_type}}</span> ---
+            </span>
+            <span v-else-if="message.action_type === 'Heals'">
+              <span class="log--heal">{{message.action_type}}</span> ---
+            </span>
+            <span v-else-if="message.action_type === 'Ultimates'">
+              <span class="log--ultimate">{{message.action_type}}</span> ---
+            </span>
+
+            <span v-if="message.action_to === 'Player'">
+              <span class="log--player">{{message.action_to}}</span> ------ For
+            </span>
+            <span v-else>
+              <span class="log--enemy">{{message.action_to}}</span> ------ For
+            </span>
+
+            <span v-if="message.action_type === 'Attacks'">
+              <span class="log--damage"> {{message.action_value}} Damage</span>
+            </span>
+            <span v-else-if="message.action_type === 'Heals'">
+              <span class="log--heal"> {{message.action_value}} Damage</span>
+            </span>
+            <span v-else-if="message.action_type === 'Ultimates'">
+              <span class="log--ultimate">
+                {{message.action_value}} Damage</span
+              >
+            </span>
+          </li>
+        </ul>
       </section>
     </div>
   </body>
