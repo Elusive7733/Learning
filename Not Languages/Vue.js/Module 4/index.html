@@ -18,17 +18,7 @@
     </header>
     <section id="app">
       <ul>
-        <li v-for="friend in friends">
-          <h2>{{ friend.name }}</h2>
-          <button @click="toggleDetails">
-            {{ details_visible ? 'Hide' : 'Show'}} Details
-          </button>
-          <ul v-if="details_visible">
-            v
-            <li><strong>Gamer Name:</strong> {{ friend.gamer_tag }}</li>
-            <li><strong>Email:</strong> {{ friend.email }}</li>
-          </ul>
-        </li>
+        <friend-contact></friend-contact>
       </ul>
     </section>
   </body>
