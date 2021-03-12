@@ -18,4 +18,3 @@ plt.xlabel("x")
 plt.ylabel("Sigmoid Function") 
   
 plt.show() 
-
