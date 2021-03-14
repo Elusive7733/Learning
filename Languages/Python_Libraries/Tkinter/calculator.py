@@ -90,3 +90,5 @@ equals = Button(btns_frame, text = "=", fg = "black", width = 10, height = 3, bd
 
 
 window.mainloop()
+
+
