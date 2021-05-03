@@ -14,16 +14,21 @@ class App extends Component {
   
   switchNameHandler = () => {
     // console.log("Here")
-    // let temp = this.state.persons[0]
-    // this.state.persons[0] = this.state.persons[1]
-    // this.state.persons[1] = temp;
-    this.setState({
-      persons: [
-        {name: "Nibba", nick: "Abduls"},
-        {name: "Hiba", nick: "Hibs"},
-        {name: "Elusive", nick: "Elu" },
-      ]
-    })
+
+    let temp_persons = this.state
+    let temp = temp_persons.persons[2]
+    temp_persons.persons[2] = temp_persons.persons[1]
+    temp_persons.persons[1] = temp_persons.persons[0]
+    temp_persons.persons[0] = temp
+    // this.setState({
+    //   persons: [
+    //     {name: "Nibba", nick: "Abduls"},
+    //     {name: "Hiba", nick: "Hibs"},
+    //     {name: "Elusive", nick: "Elu" },
+    //   ]
+    // })
+
+    this.setState(temp_persons)
   }
 
   render() {
