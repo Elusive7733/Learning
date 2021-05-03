@@ -11,6 +11,11 @@ class App extends Component {
       {name: "Elusive", nick: "Elu" },
     ]
   }
+  
+  switchNameHandler = () => {
+    console.log("Here")
+  }
+
   render() {
     return (
       // Can not use more than 1 root element, can do it in React 16 but not a good practice
@@ -19,7 +24,7 @@ class App extends Component {
       <div className="App">
         <h1>Hello This is abdullah
           <p><em>This is Italic</em></p>
-          <button>Switch Name</button>
+          <button onClick={this.switchNameHandler}>Switch Name</button>
           <Person name={this.state.persons[0].name} nick={this.state.persons[0].nick} /> <br></br>
           <Person name={this.state.persons[1].name} nick={this.state.persons[1].nick} >You like Sekiro</Person> <br></br>
           <Person name={this.state.persons[2].name} nick={this.state.persons[2].nick}/> <br></br>
