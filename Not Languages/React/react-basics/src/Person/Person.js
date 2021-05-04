@@ -1,8 +1,9 @@
 import React from 'react'
+import './Person.css'
 
 const person = (props) => {
     return(
-        <div>
+        <div className="Person">
             <p onClick={props.click}>Hello There {props.name} you are also called { props.nick }</p>
             <p>You are {Math.floor(Math.random() * 30)} years old</p>
             <p>{props.children}</p>
