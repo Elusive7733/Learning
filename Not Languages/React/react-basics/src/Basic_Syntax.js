@@ -8,8 +8,7 @@ class App extends Component {
       {name: "Abdullah", nick: "Abduls"},
       {name: "Hiba", nick: "Hibs"},
       {name: "Elusive", nick: "Elu" },
-    ],
-    show_persons: false,
+    ]
   }
   
   switchNameHandler = (newName) => {
@@ -32,11 +31,6 @@ class App extends Component {
       })
   }
 
-  togglePersonHander = () => {
-    const is_displayed = this.state.show_persons
-    this.setState({show_persons: !is_displayed})
-  }
-
   render() {
     const style = {
         color: "white", 
@@ -53,24 +47,20 @@ class App extends Component {
           <p><em>This is Italic</em></p>
           <button
             style={style}
-            onClick={this.togglePersonHander}
-            >Display Persons</button>
-          { 
-          this.state.show_persons ?
-            <div>
-                <Person
-                name={this.state.persons[0].name}
-                nick={this.state.persons[0].nick} /> <br></br>
-                <Person
-                name={this.state.persons[1].name}
-                nick={this.state.persons[1].nick}
-                click={this.switchNameHandler.bind(this, "Nibba")}
-                changed={this.nameChangeHandler} >You like Sekiro</Person> <br></br>
-                <Person
-                name={this.state.persons[2].name}
-                nick={this.state.persons[2].nick}/> <br></br>
-            </div> : null 
-          }
+            onClick={this.switchNameHandler.bind(this, "Abdullah")}
+            >Switch Name</button>
+            <Person
+              name={this.state.persons[0].name}
+              nick={this.state.persons[0].nick} /> <br></br>
+            <Person
+              name={this.state.persons[1].name}
+              nick={this.state.persons[1].nick}
+              click={this.switchNameHandler.bind(this, "Nibba")}
+              changed={this.nameChangeHandler} >You like Sekiro</Person> <br></br>
+            <Person
+              name={this.state.persons[2].name}
+              nick={this.state.persons[2].nick}/> <br></br>
+          {/* Custom HTML element */}
       </div> 
     );
 
