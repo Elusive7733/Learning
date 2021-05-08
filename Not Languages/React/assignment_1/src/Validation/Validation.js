@@ -1,24 +1,20 @@
-import React from 'react'
-import './Validation.css'
+import React from 'react';
+import './Validation.css';
 
 const validation = (props) => {
+    let validation_msg = null;
     if(props.length <= 5){
-        return(
-            <div className="Short">
-                <p>Length Too short</p>
-            </div>
-        );
+        validation_msg = "Length Too short"
     }
-    else if(props.length >= 15){
-        return(
-            <div className="Long">
-                <p>Length Too Long</p>
-            </div>
-        );
+    else if(props.length >= 15){ 
+        validation_msg = "Length Too Long"
     }
-    else{
-        return null;
-    }
+    return(
+        <div className="Validate">
+            <p>{validation_msg}</p>
+
+        </div>
+    )
 }
 
 
