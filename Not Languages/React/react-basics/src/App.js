@@ -12,7 +12,11 @@ class App extends Component {
     show_persons: false,
   }
   
-  deletePersonHandler = () => {}
+  deletePersonHandler = (person_index) => {
+      let temp = [...this.state.persons];
+      temp.splice(person_index, 1);
+      this.setState({persons: temp});
+  }
 
   nameChangeHandler = (event) => {
     this.setState({
@@ -20,13 +24,13 @@ class App extends Component {
           {name: "Abdullah", nick: "Abduls"},
           {name: event.target.value, nick: "Hibs"},
           {name: "Elusive", nick: "Elu" },
-        ]
-      })
+        ],
+      });
   }
 
   togglePersonHander = () => {
-    const is_displayed = this.state.show_persons
-    this.setState({show_persons: !is_displayed})
+    const is_displayed = this.state.show_persons;
+    this.setState({show_persons: !is_displayed});
   }
 
   render() {
@@ -37,20 +41,21 @@ class App extends Component {
         border: "1px solid grey",
         padding: "8px",
         cursor: "pointer"
-    }
+    };
 
-    let persons = null
+    let persons = null;
     if(this.state.show_persons){
         persons = (
         <div>
             {/* For loop to display each element in a list */}
-            {this.state.persons.map(element => { 
+            {this.state.persons.map((element, index) => { 
                 return (
                     <Person
+                    click = {() => this.deletePersonHandler(index)}
                     name = {element.name}
                     nick = {element.nick}
                     />
-                )
+                ) 
             })}
         </div>
         )
@@ -67,7 +72,6 @@ class App extends Component {
         {persons}
       </div> 
     );
-
   }
 }
 
