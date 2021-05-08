@@ -12,15 +12,7 @@ class App extends Component {
     show_persons: false,
   }
   
-  switchNameHandler = (newName) => {
-     this.setState({
-      persons: [
-        {name: newName, nick: "Abduls"},
-        {name: "Hiba", nick: "Hibs"},
-        {name: "Elusive", nick: "Elu" },
-      ]
-    })
-  }
+  deletePersonHandler = () => {}
 
   nameChangeHandler = (event) => {
     this.setState({
@@ -51,17 +43,15 @@ class App extends Component {
     if(this.state.show_persons){
         persons = (
         <div>
-            <Person
-            name={this.state.persons[0].name}
-            nick={this.state.persons[0].nick} /> <br></br>
-            <Person
-            name={this.state.persons[1].name}
-            nick={this.state.persons[1].nick}
-            click={this.switchNameHandler.bind(this, "Nibba")}
-            changed={this.nameChangeHandler} >You like Sekiro</Person> <br></br>
-            <Person
-            name={this.state.persons[2].name}
-            nick={this.state.persons[2].nick}/> <br></br>
+            {/* For loop to display each element in a list */}
+            {this.state.persons.map(element => { 
+                return (
+                    <Person
+                    name = {element.name}
+                    nick = {element.nick}
+                    />
+                )
+            })}
         </div>
         )
     }
