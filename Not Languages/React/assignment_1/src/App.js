@@ -14,8 +14,10 @@ class App extends Component {
   render(){
     return(
       <div className="App">
+        <div>
           <input type="text" onChange={(event) => this.updateInputHandler(event)} value={this.state.userInput} />
           <p>{this.state.userInput.length}</p>
+        </div>
       </div>
     );
   };
