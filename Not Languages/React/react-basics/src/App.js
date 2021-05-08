@@ -5,9 +5,9 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      {name: "Abdullah", nick: "Abduls"},
-      {name: "Hiba", nick: "Hibs"},
-      {name: "Elusive", nick: "Elu" },
+      { id: "asd", name: "Abdullah", nick: "Abduls"},
+      { id: "asd1", name: "Hiba", nick: "Hibs"},
+      { id: "sfg1", name: "Elusive", nick: "Elu" },
     ],
     show_persons: false,
   }
@@ -48,12 +48,14 @@ class App extends Component {
         persons = (
         <div>
             {/* For loop to display each element in a list */}
+            {/* Mapping a JavaScript array into a jsx elements */}
             {this.state.persons.map((element, index) => { 
                 return (
                     <Person
                     click = {() => this.deletePersonHandler(index)}
                     name = {element.name}
                     nick = {element.nick}
+                    key = {element.id}
                     />
                 ) 
             })}
