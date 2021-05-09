@@ -13,10 +13,25 @@ class App extends Component {
     this.setState({userInput: event.target.value})
   };
 
-  deleteCharHandler = () => {
+  deleteCharHandler = (index) => {
+    let temp_input = this.state.userInput.split('');
+    // console.log(temp_input)
+    temp_input.splice(index, 1);
+    temp_input = temp_input.join('');
+    this.setState({userInput: temp_input});
   };
 
   render(){
+    const my_string = this.state.userInput.split('').map((single_character, index) => {
+      return(
+        <Character
+        letter={single_character}
+        key = {index}
+        clicked = {() => this.deleteCharHandler(index)}
+        />
+      );
+    })
+
     return(
       <div className="App">
         <div className="InputBox">
@@ -26,15 +41,7 @@ class App extends Component {
             length = {this.state.userInput.length}
           />
         </div>
-      {this.state.userInput.split('').map((single_character, index) => {
-        return(
-          <Character
-          letter={single_character}
-          key = {index}
-          clicked = {() => this.deleteCharHandler(index)}
-          />
-        );
-      })}
+      {my_string}
       </div>
     );
   };
