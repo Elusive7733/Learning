@@ -7,7 +7,7 @@ const character = (props) => {
         padding: "16px",
         textAlign: "center",
         margin: "16px",
-        border: "2px solid blue"
+        border: "2px solid green"
     };
 
     return(
