@@ -1,7 +1,14 @@
+*{
+    background-color: black;
+}
+
+
 .InputBox{
+    background-color: white;
+    color: white;
     margin: auto;
     width: 300px;
     text-align: center;
-    border: solid 5px black;
+    border: solid 5px grey;
     padding-top: 15px;
 }
