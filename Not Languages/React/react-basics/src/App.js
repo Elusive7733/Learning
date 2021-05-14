@@ -51,7 +51,7 @@ class App extends Component {
     let persons = null;
     if(this.state.show_persons){
         // Dynamic Styling
-        style.backgroundColor = "red";  
+        style.backgroundColor = "Maroon";  
         style[':hover'] = {backgroundColor: "crimson"}  //can not use .operater here because it is a string in a object
         //____________________________
         persons = (
