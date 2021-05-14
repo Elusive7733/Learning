@@ -52,7 +52,7 @@ class App extends Component {
     if(this.state.show_persons){
         // Dynamic Styling
         style.backgroundColor = "red";  
-        style[':hover'] = "lightred"  //can not use .operater here because it is a string in a object
+        style[':hover'] = "crimson"  //can not use .operater here because it is a string in a object
         //____________________________
         persons = (
         <div>
