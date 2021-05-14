@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     const style = {
         color: "white", 
-        backgroundColor: "black",
+        backgroundColor: "Green",
         font: "inherit",
         border: "1px solid grey",
         padding: "8px",
@@ -48,6 +48,7 @@ class App extends Component {
 
     let persons = null;
     if(this.state.show_persons){
+        style.backgroundColor = "red"; //dynamic styling 
         persons = (
         <div>
             {/* For loop to display each element in a list */}
