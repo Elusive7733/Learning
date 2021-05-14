@@ -13,7 +13,7 @@ text-align: center;
 cursor: pointer;
 
 @media (min-width: 500px) { width: 450px;}
-:hover{     
+&:hover{     
     backgroundColor: Azure;
     transition: transform 0.5s;
     box-shadow: 0px 0px 5px rgb(190, 255, 255), inset 0px 0px 5px rgb(190, 255, 255);
