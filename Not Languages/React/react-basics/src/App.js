@@ -45,12 +45,15 @@ class App extends Component {
         border: "1px solid grey",
         padding: "8px",
         cursor: "pointer",
-        ':hover': {backgroundColor: 'lightgreen'}, //this works because strings can be valid JS properties
+        ':hover': {backgroundColor: "lightgreen"}, //this works because strings can be valid JS properties
     };
 
     let persons = null;
     if(this.state.show_persons){
-        style.backgroundColor = "red"; //dynamic styling 
+        // Dynamic Styling
+        style.backgroundColor = "red";  
+        style[':hover'] = "lightred"  //can not use .operater here because it is a string in a object
+        //____________________________
         persons = (
         <div>
             {/* For loop to display each element in a list */}
