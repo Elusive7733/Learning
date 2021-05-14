@@ -1,6 +1,4 @@
 import React from 'react'
-// import Radium from 'radium'
-// import './Person.css'
 import styled from 'styled-components';
 
 const Divstyle = styled.div`
