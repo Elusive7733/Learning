@@ -82,16 +82,17 @@ class App extends Component {
     }
 
     return (
-      // <StyleRoot></StyleRoot>
-      <div className="App">
-        <h1>Hello This is abdullah</h1>
-          <p className={classes.join(' ')}><em>This is Italic</em></p>
-          <button
-            style={style}
-            onClick={this.togglePersonHander}
-            >Display Persons</button>
-        {persons}
-      </div> 
+      <StyleRoot>
+        <div className="App">
+          <h1>Hello This is abdullah</h1>
+            <p className={classes.join(' ')}><em>This is Italic</em></p>
+            <button
+              style={style}
+              onClick={this.togglePersonHander}
+              >Display Persons</button>
+          {persons}
+        </div> 
+      </StyleRoot>
     );
   }
 }
