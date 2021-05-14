@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium, { StyleRoot } from 'radium';
+// import Radium, { StyleRoot } from 'radium';
+import styled from 'styled-components';
 
 class App extends Component {
   state = {
@@ -82,19 +83,21 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
-        <div className="App">
-          <h1>Hello This is abdullah</h1>
-            <p className={classes.join(' ')}><em>This is Italic</em></p>
-            <button
-              style={style}
-              onClick={this.togglePersonHander}
-              >Display Persons</button>
-          {persons}
-        </div> 
-      </StyleRoot>
+      // <StyleRoot> (for radium)
+      <div className="App">
+        <h1>Hello This is abdullah</h1>
+          <p className={classes.join(' ')}><em>This is Italic</em></p>
+          <button
+            style={style}
+            onClick={this.togglePersonHander}
+            >Display Persons</button>
+        {persons}
+      </div> 
+      // </StyleRoot>
     );
   }
 }
 
-export default Radium(App);
+// export default Radium(App);
+
+export default App;
