@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import Radium from 'radium';
 
 class App extends Component {
   state = {
@@ -43,7 +44,8 @@ class App extends Component {
         font: "inherit",
         border: "1px solid grey",
         padding: "8px",
-        cursor: "pointer"
+        cursor: "pointer",
+        ':hover': {backgroundColor: 'lightgreen'}, //this works because strings can be valid JS properties
     };
 
     let persons = null;
@@ -90,4 +92,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App);
