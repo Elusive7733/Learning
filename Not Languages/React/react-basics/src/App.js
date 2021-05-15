@@ -59,7 +59,7 @@ class App extends Component {
         </div>
         );
         // Dynamic Styling
-            btnClasses.push(classes.Red);
+            btnClasses.push(classes.Maroon);
         //________________
     }
 
