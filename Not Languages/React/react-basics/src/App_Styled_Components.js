@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
-import classes from './App.css';
+import './App.css';
 import Person from './Person/Person';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+color: white;
+background-color: ${props => props.style_changeOn ? 'Maroon' : 'Green'};
+font: inherit;
+border: 1px solid grey;
+padding: 8px;
+cursor: pointer;
+&:hover{background-color: ${props => props.style_changeOn ? 'crimson' : 'lightgreen'};}
+`;
 
 class App extends Component {
   state = {
@@ -38,8 +49,6 @@ class App extends Component {
 
   render() {
     let persons = null;
-    let btnClasses = [classes.Button]; //creating an array here
-
     if(this.state.show_persons){
         persons = (
         <div>
@@ -57,25 +66,25 @@ class App extends Component {
                 );
             })}
         </div>
-        );
-        // Dynamic Styling
-            btnClasses.push(classes.Red);
-        //________________
+        )
     }
 
-    let assigned_class = [];
+    let classes = [];
     if(this.state.persons.length <= 2){ 
-        assigned_class.push(classes.red);
+      classes.push('red');
     }
     if(this.state.persons.length <= 1){
-        assigned_class.push(classes.bold);
+      classes.push('bold');
     }
 
     return (
-        <div className={classes.App}>
+        <div className="App">
           <h1>Hello This is abdullah</h1>
-            <p className={assigned_class.join(' ')}><em>This is Italic</em></p>
-            <button className={btnClasses.join(' ')} onClick={this.togglePersonHander}>Display Persons</button>
+            <p className={classes.join(' ')}><em>This is Italic</em></p>
+            <StyledButton
+              onClick={this.togglePersonHander}
+              style_changeOn={this.state.show_persons}
+              > Display Persons </StyledButton>
           {persons}
         </div> 
     );
