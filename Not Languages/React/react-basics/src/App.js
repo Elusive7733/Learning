@@ -50,9 +50,6 @@ class App extends Component {
   render() {
     let persons = null;
     if(this.state.show_persons){
-        // Dynamic Styling with Styled Components
-
-        //____________________________
         persons = (
         <div>
             {/* For loop to display each element in a list */}

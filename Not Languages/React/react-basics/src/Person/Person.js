@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const Divstyle = styled.div`
+const StyledDiv = styled.div`
 width: 60%;
 margin: 16px auto;
 border: 1px solid grey;
@@ -21,13 +21,12 @@ cursor: pointer;
 
 const person = (props) => {
     return(
-        // <div className="Person" style={style} onClick={props.click}>
-        <Divstyle>
+        <StyledDiv>
             <p onClick={props.click}>Hello There {props.name} you are also called { props.nick }</p>
             <p>You are {Math.floor(Math.random() * 30)} years old</p>
             <p>{props.children}</p>
             <input type="text" onChange={props.changed} value={props.name}></input>
-        </Divstyle>
+        </StyledDiv>
     )
 }
 
