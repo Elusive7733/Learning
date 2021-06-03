@@ -24,7 +24,6 @@ for element in array:
         else: 
             sum += x
     else:
-        #do work here
         temp_num = 0
         temp_array = element.split('x')
         if len(temp_array[0]) < 1:
