@@ -9,14 +9,11 @@ input_str  = input()
 array = []
 array = input_str.split("+")
 temp_array = []
-# print("Array original:", array)
 
 for element in array:
     temp_array.append(element.strip())
 
-# print("\nTemp_Array:", temp_array)
 array = temp_array
-# print("\nArray_Modified:", array)
 temp_array = []
 sum = 0
 
@@ -30,7 +27,6 @@ for element in array:
         #do work here
         temp_num = 0
         temp_array = element.split('x')
-        # print(len(temp_array[0]))
         if len(temp_array[0]) < 1:
             coff = 1
         else:
