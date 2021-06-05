@@ -18,7 +18,7 @@ for filename in os.listdir(path):
     expected_outputs.append(int(output_file.read()))
     output_file.close()
 
-print(expected_outputs)
+print(expected_outputs, "\n")
 
 #________________Collecting Inputs_________________
 path = os.getcwd()
@@ -28,10 +28,15 @@ all_inputs = []
 
 for filename in os.listdir(path):
     input_file = open(path + f'\{filename}', 'r')
-    all_inputs.append(input_file.read())
+    all_inputs.append( np.fromfile(input_file, dtype=int, count=-1, sep=' ') )
     input_file.close()
 
+#________________Formating Inputs_________________
+# print(all_inputs)
+array_inputs = []
 
-print(all_inputs)
+for unformatted_array in all_inputs:
+    array_inputs.append(np.reshape(unformatted_array, (6,6)))
 
-array_
+for array in array_inputs:
+    print(array)
