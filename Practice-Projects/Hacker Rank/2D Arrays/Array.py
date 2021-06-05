@@ -2,6 +2,7 @@ import os
 import numpy as np
 import math
 
+
 #________________Collecting Outputs_________________
 path = os.getcwd()
 path += '\output'
@@ -39,6 +40,7 @@ higest = -math.inf
 array_filter = [[1, 1, 1],
                 [0, 1, 0],
                 [1, 1, 1]]
+
 array_filter = np.array(array_filter)
 
 print(array_inputs)
@@ -52,7 +54,9 @@ for array in array_inputs:
             temp.append(row[i:i+3])
 
         temp = np.array(temp)
-        print(np.nonzero(temp))
+        print("\nTemp:", temp)
+        print(temp.shape)
+        # print(np.nonzero(temp))
         pattern_exists = True
         # for small_array1, small_array2 in temp, array_filter:
         #     for element1, element2 in small_array1, small_array2:
