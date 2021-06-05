@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import math
 
 #________________Collecting Outputs_________________
 path = os.getcwd()
@@ -26,13 +27,37 @@ for filename in os.listdir(path):
     input_file.close()
 
 #________________Formating Inputs_________________
-# print(all_inputs)
 array_inputs = []
 
 for unformatted_array in all_inputs:
     array_inputs.append(np.reshape(unformatted_array, (6,6)))
 
+array_inputs = np.array(array_inputs)
 
+#________________Calculating Highest_________________
+higest = -math.inf
+array_filter = [[1, 1, 1],
+                [0, 1, 0],
+                [1, 1, 1]]
+array_filter = np.array(array_filter)
+
+print(array_inputs)
+print("\n\n")
 
 for array in array_inputs:
-    print(array)
+    #Do this inside loop
+    for i in range(3):
+        temp = []
+        for row in array[i:i+3]:
+            temp.append(row[i:i+3])
+
+        temp = np.array(temp)
+        print("\nTemp:", temp)
+        print("Dot Product: ", np.sum(np.multiply(temp, array_filter)))
+        if higest < np.sum(np.multiply(temp, array_filter)):
+            higest = np.sum(np.multiply(temp, array_filter))
+        
+    print("Highest: ", higest)
+    
+    
+# print("Highest: ", higest)
