@@ -1,11 +1,5 @@
 import os
 import numpy as np
-# 1 1 1 0 0 0
-# 0 1 0 0 0 0
-# 1 1 1 0 0 0
-# 0 0 0 0 0 0
-# 0 0 0 0 0 0
-# 0 0 0 0 0 0
 
 #________________Collecting Outputs_________________
 path = os.getcwd()
@@ -37,6 +31,8 @@ array_inputs = []
 
 for unformatted_array in all_inputs:
     array_inputs.append(np.reshape(unformatted_array, (6,6)))
+
+
 
 for array in array_inputs:
     print(array)
