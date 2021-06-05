@@ -47,29 +47,30 @@ print(array_inputs)
 print("\n\n")
 
 for array in array_inputs:
-    #Do this inside loop
-    for i in range(3):
-        temp = []
-        for row in array[i:i+3]:
-            temp.append(row[i:i+3])
-
+    count = 0
+    for subset in array:
+        #Do work Here
+        
+        print(f"Temp {count}")
         temp = np.array(temp)
-        print("\nTemp:", temp)
-        print(temp.shape)
-        ext = np.nonzero(temp)
-
+        print(temp, "\n")
+        count += 1
+        # print("\nTemp:", temp)
+        # print(temp.shape)
         pattern_exists = True
-        for index, small_array in enumerate(temp):
-            for element1, element2 in small_array1, small_array2:
-                if element2 == 1:
-                    if element1 == 0:
-                        pattern_exists = False
+        # for index, row in enumerate(temp):
+        #     print("Index:", index)
+        #     print("Row:", row)
+        # print('\n\n')
+            # attern_exists = False
+
         if pattern_exists:
             # print("\nTemp:", temp)
             # print("Dot Product: ", np.sum(np.multiply(temp, array_filter)))
             if higest < np.sum(np.multiply(temp, array_filter)):
                 higest = np.sum(np.multiply(temp, array_filter))
-        
+    input("Wait...")
+    print("\n\n\n")
     # print("Highest: ", higest)
     
     
