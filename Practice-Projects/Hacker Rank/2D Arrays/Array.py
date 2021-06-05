@@ -56,13 +56,14 @@ for array in array_inputs:
         temp = np.array(temp)
         print("\nTemp:", temp)
         print(temp.shape)
-        # print(np.nonzero(temp))
+        ext = np.nonzero(temp)
+
         pattern_exists = True
-        # for small_array1, small_array2 in temp, array_filter:
-        #     for element1, element2 in small_array1, small_array2:
-        #         if element2 == 1:
-        #             if element1 == 0:
-        #                 pattern_exists = False
+        for index, small_array in enumerate(temp):
+            for element1, element2 in small_array1, small_array2:
+                if element2 == 1:
+                    if element1 == 0:
+                        pattern_exists = False
         if pattern_exists:
             # print("\nTemp:", temp)
             # print("Dot Product: ", np.sum(np.multiply(temp, array_filter)))
