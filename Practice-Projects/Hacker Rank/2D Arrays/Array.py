@@ -36,7 +36,7 @@ for unformatted_array in all_inputs:
 array_inputs = np.array(array_inputs)
 
 #________________Calculating Highest_________________
-higest = -math.inf
+higest = []
 array_filter = [[1, 1, 1],
                 [0, 1, 0],
                 [1, 1, 1]]
@@ -46,32 +46,35 @@ array_filter = np.array(array_filter)
 print(array_inputs)
 print("\n\n")
 
+array_number = 0
 for array in array_inputs:
-    count = 0
+    hourglasses = []
+    # Collecting the Hourglasses
     for i in range(4):
         for j in range(4):
-            print(array[i:i+3, j:j+3], "\n\n")
-        input("Wait...")
-        
-        # print(f"Temp {count}")
-        # temp = np.array(temp)
-        # print(temp, "\n")
-        # count += 1
+            hourglasses.append(array[i:i+3, j:j+3])
 
-        # pattern_exists = True
-        # for index, row in enumerate(temp):
-        #     print("Index:", index)
-        #     print("Row:", row)
-        # print('\n\n')
-            # attern_exists = False
+    # Displaying the Hourglasses
+    # print(f"Hourglasses for array {array_number}") 
+    hourglasses = np.array(hourglasses)
+    # print(hourglasses, "\n")
 
-        # if pattern_exists:
-        #     # print("\nTemp:", temp)
-        #     # print("Dot Product: ", np.sum(np.multiply(temp, array_filter)))
-        #     if higest < np.sum(np.multiply(temp, array_filter)):
-        #         higest = np.sum(np.multiply(temp, array_filter))
-    print("\n\n\n")
-    # print("Highest: ", higest)
+    for hourglass in hourglasses:
+        higest_number = -9999
+        pattern_exists = True
+        for index, row in enumerate(hourglass):
+            if row[0] == 0 and array_filter[index, 0] != 0:
+                pattern_exists = False
+            if row[1] == 0 and array_filter[index, 1] != 0:
+                pattern_exists = False
+            if row[2] == 0 and array_filter[index, 2] != 0:
+                pattern_exists = False
+
+        if pattern_exists:
+            if higest_number < np.sum(np.multiply(hourglass, array_filter)):
+                higest_number = np.sum(np.multiply(hourglass, array_filter))
     
+    higest.append(higest_number)
+    array_number += 1
     
-# print("Highest: ", higest)
+print("Highest: ", higest)
