@@ -48,18 +48,17 @@ print("\n\n")
 
 for array in array_inputs:
     count = 0
-    for i in range(3):
-        for row in array[i:i+3]:
-            print(row[count: count+3], "\n\n")
-            input("Wait...")
-        count += 1
+    for i in range(4):
+        for j in range(4):
+            print(array[i:i+3, j:j+3], "\n\n")
+        input("Wait...")
         
         # print(f"Temp {count}")
         # temp = np.array(temp)
         # print(temp, "\n")
         # count += 1
 
-        pattern_exists = True
+        # pattern_exists = True
         # for index, row in enumerate(temp):
         #     print("Index:", index)
         #     print("Row:", row)
@@ -71,7 +70,6 @@ for array in array_inputs:
         #     # print("Dot Product: ", np.sum(np.multiply(temp, array_filter)))
         #     if higest < np.sum(np.multiply(temp, array_filter)):
         #         higest = np.sum(np.multiply(temp, array_filter))
-    input("Wait...")
     print("\n\n\n")
     # print("Highest: ", higest)
     
