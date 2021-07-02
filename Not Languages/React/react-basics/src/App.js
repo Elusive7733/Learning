@@ -40,6 +40,8 @@ class App extends Component {
     let persons = null;
     let btnClasses = [classes.Button]; //creating an array here
 
+    console.log(btnClasses);
+
     if (this.state.show_persons) {
       persons = (
         <div>
