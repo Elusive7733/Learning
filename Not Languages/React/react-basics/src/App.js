@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classes from "./App.css";
 import Person from "./Person/Person";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundry";
 
 class App extends Component {
   state = {
@@ -49,13 +50,14 @@ class App extends Component {
           {/* Mapping a JavaScript array into jsx elements */}
           {this.state.persons.map((element, index) => {
             return (
-              <Person
-                click={() => this.deletePersonHandler(index)}
-                changed={(event) => this.nameChangeHandler(event, element.id)}
-                name={element.name}
-                nick={element.nick}
-                key={element.id}
-              />
+              <ErrorBoundary key={element.id}>
+                <Person
+                  click={() => this.deletePersonHandler(index)}
+                  changed={(event) => this.nameChangeHandler(event, element.id)}
+                  name={element.name}
+                  nick={element.nick}
+                />
+              </ErrorBoundary>
             );
           })}
         </div>
