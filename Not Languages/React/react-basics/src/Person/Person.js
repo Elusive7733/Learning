@@ -2,11 +2,11 @@ import React from "react";
 import classes from "./Person.css";
 
 const person = (props) => {
-  // Displaying Custom Error
-  const rnd = Math.random();
-  if (rnd >= 0.7) {
-    throw new Error("Something WONG!!!");
-  }
+  // Displaying Custom Error (used with error boundry)
+  // const rnd = Math.random();
+  // if (rnd >= 0.7) {
+  //   throw new Error("Something WONG!!!");
+  // }
   return (
     <div className={classes.Person}>
       <p onClick={props.click}>
