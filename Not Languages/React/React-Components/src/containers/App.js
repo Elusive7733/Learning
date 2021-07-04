@@ -18,6 +18,7 @@ class App extends Component {
     show_persons: false,
   };
 
+  //not often used
   static getDerivedStateFromProps(props, state) {
     console.log("in App.js getDerivedStateFromProps", props);
     return state;
