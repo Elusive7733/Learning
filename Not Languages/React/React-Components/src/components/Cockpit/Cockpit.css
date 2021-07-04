@@ -6,6 +6,14 @@
   font-weight: bold;
 }
 
+.app_name {
+  font-size: 65px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  font-weight: bolder;
+  color: rgb(0, 153, 255);
+}
+
 .Button {
   color: white;
   background-color: green;

@@ -3,8 +3,9 @@ import React from "react";
 import Person from "./Person/Person";
 
 //if only want to return in a function and do nothing else we can use round () paranthesis
-const persons = (props) =>
-  props.persons.map((element, index) => {
+const persons = (props) => {
+  console.log("Persons.js rendering...");
+  return props.persons.map((element, index) => {
     return (
       <Person
         key={element.id}
@@ -15,5 +16,6 @@ const persons = (props) =>
       />
     );
   });
+};
 
 export default persons;

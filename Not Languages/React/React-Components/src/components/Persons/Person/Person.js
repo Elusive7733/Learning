@@ -7,6 +7,7 @@ const person = (props) => {
   // if (rnd >= 0.7) {
   //   throw new Error("Something WONG!!!");
   // }
+  console.log("1 Person.js rendering...");
   return (
     <div className={classes.Person}>
       <p onClick={props.clicked}>
