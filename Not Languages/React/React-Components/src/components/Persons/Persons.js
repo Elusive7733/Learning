@@ -25,6 +25,24 @@ import Person from "./Person/Person";
 //__________Class Based Component__________
 
 class Persons extends Component {
+  static getDerivedStateFromProps(props, state) {
+    console.log("in Persons.js getDerivedStateFromProps");
+    return state;
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("in Persons.js shouldComponentUpdate");
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+    console.log("in Persons.js getSnapshotBeforeUpdate");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("in Persons.js componentDidUpdate");
+  }
+
   render() {
     console.log("Persons.js rendering...");
     return this.props.persons.map((element, index) => {
