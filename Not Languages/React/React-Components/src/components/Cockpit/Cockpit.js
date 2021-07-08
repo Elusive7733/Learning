@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Cockpit.css";
 
 const cockpit = (props) => {
+  //Can use multiple useEffects
+
+  //The Argument props.show_persons means the UseEffect will only trigger if my show_persons changes
+  //Improvement performence wise
+  useEffect(() => {
+    console.log("in Cockpit.js useEffect");
+
+    // Simulating an HTTP Request
+    setTimeout(() => {
+      alert("Data Toggled");
+    }, 500);
+  }, [props.show_persons]);
+
+  //__________________________________________________________
+
+  //Only run the first time, similar to componentDidMount
+  useEffect(() => {
+    console.log("in Cockpit.js useEffect");
+
+    // Simulating an HTTP Request
+    setTimeout(() => {
+      alert("Data Toggled");
+    }, 500);
+  }, []);
+
+  //__________________________________________________________
+
+  //similar to componentWillUnmount
+  useEffect(() => {
+    console.log("in Cockpit.js useEffect");
+
+    // Simulating an HTTP Request
+    setTimeout(() => {
+      alert("Data Toggled");
+    }, 500);
+    return () => {
+      console.log("Cockpit.js cleanup useEffect");
+    };
+  }, []);
+
   let assigned_class = [];
   let btnClasses = [classes.Button];
 

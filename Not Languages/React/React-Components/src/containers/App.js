@@ -54,7 +54,6 @@ class App extends Component {
 
   render() {
     console.log("in App.js render");
-    ``;
     let persons_list = null;
 
     if (this.state.show_persons) {

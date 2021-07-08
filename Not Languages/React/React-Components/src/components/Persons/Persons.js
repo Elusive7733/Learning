@@ -25,10 +25,15 @@ import Person from "./Person/Person";
 //__________Class Based Component__________
 
 class Persons extends Component {
-  static getDerivedStateFromProps(props, state) {
-    console.log("in Persons.js getDerivedStateFromProps");
-    return state;
-  }
+  // Must have some previous State
+  // static getDerivedStateFromProps(props, state) {
+  //   console.log("in Persons.js getDerivedStateFromProps");
+  //   return state;
+  // }
+
+  // componentWillReceiveProps(nextProps, nextContext) {
+  //   console.log("in Persons.js componentWillReceiveProps", this.props);
+  // }
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log("in Persons.js shouldComponentUpdate");
@@ -37,10 +42,18 @@ class Persons extends Component {
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
     console.log("in Persons.js getSnapshotBeforeUpdate");
+    return { message: "Snapshot!" };
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  //Most used
+  componentDidUpdate(prevProps, prevState, snapshot) {
     console.log("in Persons.js componentDidUpdate");
+    console.log(snapshot);
+  }
+
+  //clean up work before component gets removed
+  componentWillUnmount() {
+    console.log("in Persons.js componentWillUnmount");
   }
 
   render() {
