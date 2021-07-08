@@ -3,3 +3,27 @@
   font-size: small;
   color: royalblue;
 }
+
+.Button {
+  color: black;
+  background-color: white;
+  font: inherit;
+  font-size: 30px;
+  border: 2px solid grey;
+  padding: 15px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: aqua;
+}
+
+.Button.Black {
+  color: white;
+  background-color: black;
+}
+
+.Button.Black:hover {
+  background-color: red;
+}

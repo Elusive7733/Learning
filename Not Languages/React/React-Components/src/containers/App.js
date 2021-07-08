@@ -69,23 +69,31 @@ class App extends Component {
       );
     }
 
+    let btnClasses = [classes.Button];
+    if (this.state.show_cockpit) {
+      btnClasses.push(classes.Black);
+    }
+
     return (
       <div className={classes.App}>
         <button
+          className={btnClasses.join(" ")}
           onClick={() => {
-            this.setState({ show_cockpit: false });
+            this.setState({ show_cockpit: !this.state.show_cockpit });
           }}
         >
           Toggle Clockpit
         </button>
-        <Cockpit
-          // this.props are used in class based components
-          app_name={this.props.app_name}
-          show_persons={this.state.show_persons}
-          persons={this.state.persons}
-          clicked={this.togglePersonHander}
-        />
-        {persons_list}
+        {this.state.show_cockpit ? (
+          <Cockpit
+            // this.props are used in class based components
+            app_name={this.props.app_name}
+            show_persons={this.state.show_persons}
+            persons={this.state.persons}
+            clicked={this.togglePersonHander}
+          />
+        ) : null}
+        {this.state.show_cockpit ? { persons_list } : null}
       </div>
     );
   }
