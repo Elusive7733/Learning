@@ -16,6 +16,7 @@ class App extends Component {
       { id: "sfg1", name: "Elusive", nick: "Elu" },
     ],
     show_persons: false,
+    show_cockpit: true,
   };
 
   //not often used
@@ -70,6 +71,13 @@ class App extends Component {
 
     return (
       <div className={classes.App}>
+        <button
+          onClick={() => {
+            this.setState({ show_cockpit: false });
+          }}
+        >
+          Toggle Clockpit
+        </button>
         <Cockpit
           // this.props are used in class based components
           app_name={this.props.app_name}
