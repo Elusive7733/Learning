@@ -36,10 +36,11 @@ const cockpit = (props) => {
     console.log("in Cockpit.js useEffect");
 
     // Simulating an HTTP Request
-    setTimeout(() => {
-      alert("Data Toggled");
-    }, 500);
+    // const timer = setTimeout(() => {
+    //   alert("Data Toggled");
+    // }, 500);
     return () => {
+      // clearTimeout(timer);
       console.log("Cockpit.js cleanup useEffect");
     };
   }, []);

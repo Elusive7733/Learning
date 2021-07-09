@@ -82,7 +82,7 @@ class App extends Component {
             this.setState({ show_cockpit: !this.state.show_cockpit });
           }}
         >
-          Toggle Clockpit
+          Toggle Cockpit
         </button>
         {this.state.show_cockpit ? (
           <Cockpit
@@ -93,7 +93,7 @@ class App extends Component {
             clicked={this.togglePersonHander}
           />
         ) : null}
-        {this.state.show_cockpit ? { persons_list } : null}
+        {persons_list}
       </div>
     );
   }
