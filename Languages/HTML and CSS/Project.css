@@ -12,6 +12,21 @@ body {
 
 .header {
   color: white;
+  padding: none;
+  margin: none;
+}
+
+h2 {
+  padding: 1px;
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.img {
+  margin: none;
+  padding: none;
+  font-size: 75px;
 }
 
 .inputs {
@@ -26,14 +41,47 @@ body {
 #email,
 #password {
   margin: 0px;
-  padding: 5px;
+  padding: 0px;
   width: 100%;
   height: 60px;
-  border: gray 1px solid;
+  border: none;
   outline: none;
+  text-indent: 25px;
+}
+
+#email {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+#password {
+  border-top: gray 1px solid;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .footer {
   margin-top: 15px;
   color: white;
+}
+
+#loginBtn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #2186d4;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.footer p {
+  font-size: large;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
 }
