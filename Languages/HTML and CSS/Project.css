@@ -1,0 +1,28 @@
+body {
+  background-color: #589ed9;
+}
+
+.container {
+  margin: auto;
+  width: 30vh;
+  padding-top: 250px;
+}
+
+.header {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  margin-left: 25%;
+}
+
+.inputs {
+  width: 100%;
+  margin-top: 1px;
+  height: 50px;
+  border: white 1px solid;
+  border-radius: 5px;
+}
+
+#email,
+#password {
+  width: 100%;
+}
