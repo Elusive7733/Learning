@@ -17,6 +17,7 @@ class App extends Component {
     ],
     show_persons: false,
     show_cockpit: true,
+    counter: 0,
   };
 
   //not often used
@@ -45,7 +46,12 @@ class App extends Component {
     const temp_persons = [...this.state.persons];
     temp_persons[person_index].name = event.target.value;
 
-    this.setState({ persons: temp_persons });
+    this.setState((Prev_State, props) => {
+      return {
+        persons: temp_persons,
+        counter: Prev_State.counter + 1,
+      };
+    });
   };
 
   togglePersonHander = () => {
