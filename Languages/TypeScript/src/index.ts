@@ -1,19 +1,4 @@
-let My_Name: string = "Hibi";
-
-// My_Name = 4;
-
-console.log("Name: ", My_Name);
-
-// Handle null
-let my_h1 = document.getElementById("greeting");
-
-if (my_h1 === null) {
-  alert("something wong");
-} else {
-  my_h1.innerHTML = `Hello ${My_Name}`;
-}
-
-// Basic Types
+//__________________Basic Types__________________
 
 let id: number = 69;
 let planet: string = "Saturn";
@@ -21,3 +6,8 @@ let exit_flag: boolean = true;
 let xyz: any = "what";
 
 xyz = true; //not an error because of :any type
+
+// __________________Arrays__________________
+let names: string[] = ["Abdullah", "Elusive", "Raheel"]; // string[] tells the compiler that each element must be a string
+
+// names.push(12);
