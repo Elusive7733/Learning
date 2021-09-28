@@ -11,4 +11,27 @@ let names = ["Abdullah", "Elusive", "Raheel"]; // string[] tells the compiler th
 let test = [1, "Hello", true];
 // __________________Tupples__________________
 let person = [22, "Hiba", true];
+// __________________Tupples Array__________________
+let students;
+students = [
+    [180170, "Abdullah"],
+    [181137, "Hiba"],
+];
+// __________________Union__________________
+let name_or_num = 22;
+name_or_num = "Qasim";
+// name_or_num = true; Error
+// __________________Enums__________________
+var direction;
+(function (direction) {
+    direction[direction["up"] = 0] = "up";
+    direction[direction["down"] = 1] = "down";
+    direction[direction["left"] = 2] = "left";
+    direction[direction["right"] = 3] = "right";
+})(direction || (direction = {}));
+console.log(direction.left);
+// __________________ __________________
+// __________________ __________________
+// __________________ __________________
+// __________________ __________________
 // __________________ __________________

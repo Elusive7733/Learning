@@ -18,4 +18,35 @@ let test: any[] = [1, "Hello", true];
 
 let person: [number, string, boolean] = [22, "Hiba", true];
 
+// __________________Tupples Array__________________
+let students: [number, string][];
+
+students = [
+  [180170, "Abdullah"],
+  [181137, "Hiba"],
+];
+
+// __________________Union__________________
+let name_or_num: string | number = 22;
+name_or_num = "Qasim";
+// name_or_num = true; Error
+
+// __________________Enums__________________
+enum direction {
+  up,
+  down,
+  left,
+  right,
+}
+
+console.log(direction.left);
+
+// __________________ __________________
+
+// __________________ __________________
+
+// __________________ __________________
+
+// __________________ __________________
+
 // __________________ __________________
