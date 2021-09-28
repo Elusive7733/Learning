@@ -10,3 +10,9 @@ if (my_h1 === null) {
 else {
     my_h1.innerHTML = `Hello ${My_Name}`;
 }
+// Basic Types
+let id = 69;
+let planet = "Saturn";
+let exit_flag = true;
+let xyz = "what";
+xyz = true; //not an error because of :any type
