@@ -3,6 +3,7 @@
 let id = 69;
 let planet = "Saturn";
 let exit_flag = true;
+let date = new Date("2019-01-16");
 let xyz = "what";
 xyz = true; //not an error because of :any type
 // __________________Arrays__________________
@@ -29,8 +30,20 @@ var direction;
     direction[direction["left"] = 2] = "left";
     direction[direction["right"] = 3] = "right";
 })(direction || (direction = {}));
-console.log(direction.left);
-// __________________ __________________
+// __________________Objects__________________
+const user = {
+    id: 1,
+    name: true,
+};
+const user_with_types = {
+    id: 1,
+    name: "Abd",
+};
+const news = {
+    date: new Date(),
+    headline: "Elusive learned Typescript !",
+};
+console.log(news.date);
 // __________________ __________________
 // __________________ __________________
 // __________________ __________________
