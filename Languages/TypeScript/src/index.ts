@@ -1,4 +1,6 @@
-//__________________Basic Types__________________
+// TODO: https://www.youtube.com/watch?v=BCg4U1FzODs&t=729s
+
+//*__________________Basic Types__________________
 
 let id: number = 69;
 let planet: string = "Saturn";
@@ -6,20 +8,21 @@ let exit_flag: boolean = true;
 let date: Date = new Date("2019-01-16");
 let xyz: any = "what";
 
-xyz = true; //not an error because of :any type
+xyz = true; //!not an error because of :any type
 
-// __________________Arrays__________________
+//*__________________Arrays__________________
 
-let names: string[] = ["Abdullah", "Elusive", "Raheel"]; // string[] tells the compiler that each element must be a string
-// names.push(12);
+let names: string[] = ["Abdullah", "Elusive", "Raheel"]; //? string[] tells the compiler that each element must be a string
+//! names.push(12);
 
 let test: any[] = [1, "Hello", true];
 
-// __________________Tupples__________________
+//*__________________Tupples__________________
 
 let person: [number, string, boolean] = [22, "Hiba", true];
 
-// __________________Tupples Array__________________
+//*__________________Tupples Array__________________
+
 let students: [number, string][];
 
 students = [
@@ -27,12 +30,13 @@ students = [
   [181137, "Hiba"],
 ];
 
-// __________________Union__________________
+//*__________________Union__________________
+
 let name_or_num: string | number = 22;
 name_or_num = "Qasim";
-// name_or_num = true; Error
+//! name_or_num = true; Error
 
-// __________________Enums__________________
+//*__________________Enums__________________
 
 enum direction {
   up,
@@ -41,7 +45,7 @@ enum direction {
   right,
 }
 
-// __________________Objects__________________
+//*__________________Objects__________________
 
 const user = {
   id: 1,
@@ -56,16 +60,16 @@ const user_with_types: { id: number; name: string } = {
 type News = { date: Date; headline: string };
 
 const news: News = {
-  date: new Date(), // Current Date and Time
+  date: new Date(), //? Current Date and Time
   headline: "Elusive learned Typescript !",
 };
 
 console.log(news.date);
 
-// __________________ __________________
+//*__________________Type Assertion__________________
 
-// __________________ __________________
+//*__________________ __________________
 
-// __________________ __________________
+//*__________________ __________________
 
-// __________________ __________________
+//*__________________ __________________
