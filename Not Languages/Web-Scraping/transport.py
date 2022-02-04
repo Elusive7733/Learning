@@ -76,6 +76,10 @@ try:
     yesterday = yesterday.strftime("%m/%d/%Y")
     date.send_keys(yesterday)
     date.send_keys(Keys.RETURN)
+    selection = driver.find_element_by_name("driver")
+    
+    selection.click()
+    # selection.s   
     driver.find_element_by_name("search").click()
 except:
     print(".............Error 3.............")
@@ -90,8 +94,8 @@ try:
     table = WebDriverWait(driver, 15).until(
         EC.presence_of_element_located((By.ID, "activityGrid"))
     )
-    buttons = table.find_elements_by_tag_name("span")
-    buttons[1].click()
+    # anchors = table.find_elements_by_tag_name("a")
+    # print(anchors[0].text)
 
 except:
     print(".............Error 4.............")
