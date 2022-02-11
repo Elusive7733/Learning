@@ -1,32 +1,67 @@
-import employeeData from "../data.json";
-import reportData from "../data2.json";
-import MyResponsiveBar from "../components/MyResponsiveBar";
+import employeeData from "../data/employeeData.json";
+import reportData from "../data/reportData.json";
+import testData from "../data/testData.json";
+import EmployeeStatus from "../components/EmployeeStatus/EmployeeStatus";
+import ReportStatus from "../components/ReportStatus/ReportStatus";
+import Calender from "../components/Calender/Calender";
+import { useEffect } from "react";
 
-function App() {
-  let mylist = [];
-  // for (let i = 0; i < employeeData.length; i++) {
-  //   mylist.push(employeeData[i]);
-  // }
-  for (let i = 0; i < reportData.length; i++) {
-    mylist.push(reportData[i]);
-  }
+const App = () => {
+  let employeeList = [];
+  let reportList = [];
+  let testList = [];
 
-  console.log(mylist);
+  useEffect(() => {
+    for (let i = 0; i < employeeData.length; i++) {
+      employeeList.push(employeeData[i]);
+    }
+    for (let i = 0; i < reportData.length; i++) {
+      reportList.push(reportData[i]);
+    }
+    for (let i = 0; i < testData.length; i++) {
+      testList.push(testData[i]);
+    }
+  }, []);
+
+  console.log(employeeList);
+  console.log(reportList);
+
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <div
         style={{
-          margin: "0 auto",
+          // margin: "0 auto",
           width: "30%",
-          height: "40%",
+          height: "20%",
           backgroundColor: "#F6F6F6",
-          color: "white",
         }}
       >
-        <MyResponsiveBar data={mylist} />
+        <ReportStatus data={reportList} />
+      </div>
+
+      <div
+        style={{
+          // margin: "0 auto",
+          width: "30%",
+          height: "70%",
+          backgroundColor: "#F6F6F6",
+        }}
+      >
+        <EmployeeStatus data={employeeList} />
+      </div>
+
+      <div
+        style={{
+          margin: "0 auto",
+          width: "70%",
+          height: "50%",
+          backgroundColor: "#F6F6F6",
+        }}
+      >
+        <Calender />
       </div>
     </div>
   );
-}
+};
 
 export default App;

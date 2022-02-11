@@ -1,32 +1,32 @@
 [
   {
-    "country": "Raheel",
+    "employee": "Raheel",
     "Late": 3,
     "On Time": 20,
     "In Progress": 38
   },
   {
-    "country": "Aebad",
+    "employee": "Aebad",
     "Late": 8,
     "On Time": 20,
     "In Progress": 25
   },
   {
-    "country": "Daniyal",
+    "employee": "Daniyal",
     "Late": 6,
     "On Time": 22,
     "In Progress": 32
   },
   {
-    "country": "Yousuf",
+    "employee": "Yousuf",
     "Late": 10,
     "On Time": 22,
     "In Progress": 19
   },
   {
-    "country": "Abdullah",
-    "Late": 5,
-    "On Time": 37,
+    "employee": "Abdullah",
+    "Late": 10,
+    "On Time": 30,
     "In Progress": 28
   }
 ]

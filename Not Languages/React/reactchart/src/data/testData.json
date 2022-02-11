@@ -1,0 +1,218 @@
+[
+  {
+    "employee": "1",
+    "Late": 3,
+    "On Time": 20,
+    "In Progress": 38
+  },
+  {
+    "employee": "2",
+    "Late": 8,
+    "On Time": 20,
+    "In Progress": 25
+  },
+  {
+    "employee": "3",
+    "Late": 6,
+    "On Time": 22,
+    "In Progress": 32
+  },
+  {
+    "employee": "4",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "5",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "6",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "7",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "8",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "9",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "10",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "11",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "12",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "13",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "14",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "15",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "16",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "17",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "18",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "19",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "20",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "21",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "22",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "23",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "24",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "25",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "26",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "27",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "28",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "29",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "30",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "31",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "32",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "33",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "34",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "35",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  },
+  {
+    "employee": "36",
+    "Late": 10,
+    "On Time": 22,
+    "In Progress": 19
+  }
+]

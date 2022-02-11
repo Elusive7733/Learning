@@ -1,14 +1,14 @@
 [
   {
-    "country": "Late",
+    "status": "Late",
     "Late": 32
   },
   {
-    "country": "On Time",
+    "status": "On Time",
     "On Time": 121
   },
   {
-    "country": "In Progress",
+    "status": "In Progress",
     "In Progress": 174
   }
 ]
