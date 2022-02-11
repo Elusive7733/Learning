@@ -26,9 +26,9 @@ const MyResponsiveBar = ({ data }) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "Number Of Reports",
-      legendPosition: "middle",
-      legendOffset: 32,
+      // legend: "Number Of Reports",
+      // legendPosition: "middle",
+      // legendOffset: 32,
     }}
     axisLeft={{
       tickSize: 5,

@@ -14,7 +14,15 @@ function App() {
   console.log(mylist);
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
-      <div style={{ margin: "0 auto", width: "30%", height: "70%" }}>
+      <div
+        style={{
+          margin: "0 auto",
+          width: "30%",
+          height: "40%",
+          backgroundColor: "#F6F6F6",
+          color: "white",
+        }}
+      >
         <MyResponsiveBar data={mylist} />
       </div>
     </div>
