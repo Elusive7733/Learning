@@ -6,6 +6,11 @@ import ReportStatus from "../components/ReportStatus/ReportStatus";
 import Calender from "../components/Calender/Calender";
 import { useEffect } from "react";
 
+const styles = {
+  fontFamily: "Roboto",
+  width: "100vw",
+  height: "100vh",
+};
 const App = () => {
   let employeeList = [];
   let reportList = [];
@@ -27,7 +32,7 @@ const App = () => {
   console.log(reportList);
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={styles}>
       <div
         style={{
           // margin: "0 auto",
@@ -55,7 +60,7 @@ const App = () => {
           margin: "0 auto",
           width: "70%",
           height: "50%",
-          backgroundColor: "#F6F6F6",
+          backgroundColor: "white",
         }}
       >
         <Calender />
