@@ -37,7 +37,7 @@ def Login(driver):
     f.close()
 
     driver.get("https://login.brightree.net")
-    driver.maximize_window()
+    driver.minimize_window()
 
     # Wait for website to load
     while True:
@@ -59,7 +59,7 @@ def Login(driver):
         except:
             print("Couldn't Login")
 
-def DeleteReport(driver):
+def DeleteReport(driver, window):
     driver.get("https://brightree.net/F1/0320/NHMedSupply/SystemSetup/frmReportScheduleOutput.aspx")
 
     try:
@@ -67,16 +67,21 @@ def DeleteReport(driver):
             EC.presence_of_element_located((By.ID, "m_ctl00_c_c_dgResults_ctl00_ctl02_ctl01_ClientSelectColumnSelectCheckBox"))
         ).click()
 
-        # make the driver wait 10 seconds
-        # WebDriverWait(driver, 5)
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "m_ctl00_c_c_btnDelete_input"))
+        ).click()
+        
+        driver.switch_to.window(window)
+        sleep(5)
+        driver.minimize_window()
 
-        driver.switch_to_frame("aspnetForm")
+        # driver.switch_to_frame("aspnetForm")
         # driver.switch_to_default_content()
 
 
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "ctl00_c_lbtnYes_input"))
-        ).click()
+        # WebDriverWait(driver, 10).until(
+        #     EC.presence_of_element_located((By.ID, "ctl00_c_lbtnYes_input"))
+        # ).click()
 
         # driver.find_element_by_xpath("//form[@id='aspnetForm']/input[0]").click()
 
@@ -90,13 +95,13 @@ if __name__ == "__main__":
     # Setting up the driver
     PATH = "C:\Program Files (x86)\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
+    window = driver.current_window_handle
 
     Login(driver)
+
     sleep(1)
 
-    DeleteReport(driver)
-
-    # exit(1);
+    DeleteReport(driver, window)
 
     GetReport(driver, "https://brightree.net/F1/0320/NHMedSupply/Home/frmMyAdhocViewer.aspx?rn=BI\Brightree+Invoice+number+and+SO+number", "BT Invoice Number and SO Number")
     GetReport(driver, "https://brightree.net/F1/0320/NHMedSupply/Home/frmMyAdhocViewer.aspx?rn=BI\BT+Analysis+SO+Details", "BT Analysis SO Details")
