@@ -67,23 +67,22 @@ def DeleteReport(driver):
             EC.presence_of_element_located((By.ID, "m_ctl00_c_c_dgResults_ctl00_ctl02_ctl01_ClientSelectColumnSelectCheckBox"))
         ).click()
 
+        # make the driver wait 10 seconds
+        # WebDriverWait(driver, 5)
+
+        driver.switch_to_frame("aspnetForm")
+        # driver.switch_to_default_content()
+
+
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, "m_ctl00_c_c_btnDelete_input"))
+            EC.presence_of_element_located((By.ID, "ctl00_c_lbtnYes_input"))
         ).click()
-        
-        sleep(2)
-        
-        # WebDriverWait(driver, 10).until(
-        #     EC.presence_of_element_located((By.ID, "ctl00_c_lbtnYes_input"))
-        # ).click()
 
-        # find_element_by_id("ctl00_c_lbtnYes_input").click()
+        # driver.find_element_by_xpath("//form[@id='aspnetForm']/input[0]").click()
 
-        # find_element_by_xpath("//*[@id='ctl00_c_lbtnYes_input']").click()
+        # yesbtn = driver.find_element_by_xpath("/html/body/form/div[3]/div[2]/span[1]/input[1]")
+        # yesbtn.click()
 
-        # find_element_by_name("ctl00$c$lbtnYes").click()
-
-        sleep(2)
     except:
         print("No Reports to Delete")
     
@@ -95,7 +94,9 @@ if __name__ == "__main__":
     Login(driver)
     sleep(1)
 
-    # DeleteReport(driver)
+    DeleteReport(driver)
+
+    # exit(1);
 
     GetReport(driver, "https://brightree.net/F1/0320/NHMedSupply/Home/frmMyAdhocViewer.aspx?rn=BI\Brightree+Invoice+number+and+SO+number", "BT Invoice Number and SO Number")
     GetReport(driver, "https://brightree.net/F1/0320/NHMedSupply/Home/frmMyAdhocViewer.aspx?rn=BI\BT+Analysis+SO+Details", "BT Analysis SO Details")
