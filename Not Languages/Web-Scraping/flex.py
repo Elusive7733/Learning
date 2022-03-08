@@ -5,6 +5,8 @@ from selenium.webdriver.support import expected_conditions as expect
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
+print("dude")
+
 cpath = which("chromedriver")
 print(cpath)
 
