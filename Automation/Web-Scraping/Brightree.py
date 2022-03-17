@@ -7,11 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from datetime import datetime, timedelta
 import time
 
-# Getting Id and Password from file
-id = "raheel@nhmedsupply"
-f = open("C:\\Users\\HP-ZUE-5\\Desktop\\test\\Brightree.txt", "r")
-password = f.readline()
-f.close()
+# Getting Id and Password
+id = "your_id"
+password = "Your_Brightree_Password"
 
 # Setting up the driver
 PATH = "C:\Program Files (x86)\chromedriver.exe"
