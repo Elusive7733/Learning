@@ -1,7 +1,7 @@
 import socket
 import threading
 
-HEADER = 64
+HEADER = 2048
 PORT = 5050
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
@@ -19,16 +19,12 @@ def connectClient(conn, addr):
 
     connected = True
     while connected:
-        msgLength = conn.recv(HEADER).decode(FORMAT)
-        if msgLength:
-            msgLength = int(msgLength)
-            msg = conn.recv(msgLength).decode(FORMAT)
-            if msg == QUIT_MESSAGE:
-                connected = False
-                IP_POOl.remove(addr[0]) #Removes IP from IP_POOl if client disconnects
-                
-            print("{} sent: {}".format(addr, msg))
-            conn.send("Message Received!".encode(FORMAT))
+        msg = conn.recv(2048).decode(FORMAT)
+        if msg == QUIT_MESSAGE:
+            connected = False
+            # IP_POOl.remove(addr[0]) #Removes IP from IP_POOl if client disconnects
+        print("{} sent {}".format(addr, msg))
+        # conn.send("Message Received!".encode(FORMAT))
     conn.close()
 
 
@@ -36,7 +32,6 @@ def startServer():
     server.listen()
     while True:
         conn, addr = server.accept()
-
         #2nd Mitigation - Prevent multiple connections from the same IP
         if(addr[0] not in IP_POOl):
             IP_POOl.append(addr[0])
