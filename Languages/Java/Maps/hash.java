@@ -19,9 +19,9 @@ public class hash {
             map.put(array[i], i);
         }
 
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
-        }
+        // for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+        //     System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        // }
 
         // if (map.get(11) == null) {
         //     System.out.println("not it");
@@ -33,16 +33,13 @@ public class hash {
       
         for (int i = 0; i < array.length; i++) {
 
-            if (map.get(target - array[i]) == null) {
-                // System.out.println("not it");
-            }
-            else {
-                // System.out.println("it is: " + map.get(target - array[i]));
+            if (map.get(target - array[i]) != null) {
                 System.out.printf("array[%d] + array[%d]", map.get(target - array[i]), i);
                 System.out.print(": ");
                 System.out.println(array[map.get(target - array[i])] + "+" + array[i]);
                 System.out.println("\n");
             }
+
         }
     }
 }
