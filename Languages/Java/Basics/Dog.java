@@ -19,4 +19,9 @@ public class Dog {
     public void tellAge() {
         System.out.println("Age of " + name + " is " + age);
     }
+
+    public static void dogStatic() {
+        System.out.println("This is a Static method from Dog");
+        // can not use name, age as it is a non static field
+    }
 }

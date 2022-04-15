@@ -32,9 +32,20 @@ class test {
         myDog.tellAge();
         hibasDog.tellAge();
 
+        Dog.dogStatic(); //this is only possible because of static funtion
+        // myDog.dogStatic(); // this throws a warning as method should be accessed in a static way
+
+        int largeNumber = 123_456_789; //seperate digits with _
+        long verylargeNumber = 3_123_456_789L; //add the L suffix to let java know it is a long number
+
+        float decimalNumber = 10.99F; //add the F suffix to let java know it is a float number
+
+        double largeDecimalNumber = 1000.9999; //F is only required for float because by default java consideres the number as double
     }
 
     //private function
+
+    //Static Method means you can call this function without creating an object of this class
     private static void callCat() {
         Cat.meow();
     }
