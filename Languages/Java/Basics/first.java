@@ -32,7 +32,7 @@ class test {
         hibasDog.tellAge();
 
         Dog.dogStatic(); //this is only possible because of static funtion
-        // myDog.dogStatic(); // this throws a warning as method should be accessed in a static way
+        myDog.dogStatic(); // this throws a warning as method should be accessed in a static way
     }
 
     //Static Method means you can call this function without creating an object of this class
