@@ -6,7 +6,7 @@ class App extends Component {
   state = {
     persons: [
       {name: "Abdullah", nick: "Abduls"},
-      {name: "Hiba", nick: "Hibs"},
+      {name: "Bruce", nick: "Batman"},
       {name: "Elusive", nick: "Elu" },
     ]
   }
@@ -15,7 +15,7 @@ class App extends Component {
      this.setState({
       persons: [
         {name: newName, nick: "Abduls"},
-        {name: "Hiba", nick: "Hibs"},
+        {name: "Bruce", nick: "Batman"},
         {name: "Elusive", nick: "Elu" },
       ]
     })

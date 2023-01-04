@@ -19,7 +19,7 @@ let test: any[] = [1, "Hello", true];
 
 //*__________________Tupples__________________
 
-let person: [number, string, boolean] = [22, "Hiba", true];
+let person: [number, string, boolean] = [22, "Bruce", true];
 
 //*__________________Tupples Array__________________
 
@@ -27,7 +27,7 @@ let students: [number, string][];
 
 students = [
   [180170, "Abdullah"],
-  [181137, "Hiba"],
+  [999000, "Goku"],
 ];
 
 //*__________________Union__________________

@@ -9,10 +9,10 @@ const app = Vue.createApp({
           email: "Abdullaharaheel@gmail.com",
         },
         {
-          id: "Hiba",
-          name: "Hiba Abdullah",
-          gamer_tag: "Ms_birb",
-          email: "Hiba_razzaq00@gmail.com",
+          id: "Saitama",
+          name: "One Punch Man",
+          gamer_tag: "OPM",
+          email: "OPM@gmail.com",
         },
       ],
     };

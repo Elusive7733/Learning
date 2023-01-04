@@ -11,7 +11,7 @@ const app = (props) => {
     const [current_state, set_Person_state] = useState({  
         persons: [
           {name: "Abdullah", nick: "Abduls"},
-          {name: "Hiba", nick: "Hibs"},
+          {name: "Bruce", nick: "Batman"},
           {name: "Elusive", nick: "Elu" },
         ]
       })
@@ -25,7 +25,7 @@ const app = (props) => {
     
         set_Person_state({  
             persons: [
-              {name: "Hiba", nick: "Hibs"},
+              {name: "Bruce", nick: "Batman"},
               {name: "Abdullah", nick: "Abduls"},
               {name: "Elusive", nick: "Elu" },
             ]
