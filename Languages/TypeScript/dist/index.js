@@ -12,12 +12,12 @@ let names = ["Abdullah", "Elusive", "Raheel"]; //? string[] tells the compiler t
 //! names.push(12);
 let test = [1, "Hello", true];
 //*__________________Tupples__________________
-let person = [22, "Hiba", true];
+let person = [22, "Bruce", true];
 //*__________________Tupples Array__________________
 let students;
 students = [
     [180170, "Abdullah"],
-    [181137, "Hiba"],
+    [999900, "Goku"],
 ];
 //*__________________Union__________________
 let name_or_num = 22;

@@ -37,10 +37,10 @@ app.component("friend-contact", {
     return {
       details_visible: false,
       friend: {
-        id: "Hiba",
-        name: "Hiba Abdullah",
-        gamer_tag: "Ms_birb",
-        email: "Hiba_razzaq00@gmail.com",
+        id: "My fren",
+        name: "frenlumer1",
+        gamer_tag: "fren",
+        email: "fren@gmail.com",
       },
     };
   },
